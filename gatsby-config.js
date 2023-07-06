@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-portfolio-minimal",
       options: {
-        siteUrl: "https://gatsby-starter-portfolio-minimal-theme.netlify.app/", // Used for sitemap generation
+        siteUrl: "https://porlasrramas.github.io/", // Used for sitemap generation
         manifestSettings: {
           favicon: "./content/images/favicon.png", // Path is relative to the root
           siteName: "My Minimal Portfolio", // Used in manifest.json
@@ -23,6 +23,40 @@ module.exports = {
         //     anonymize: true, // Default true
         //     environments: ["production", "development"] // Default ["production"]
         // }
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: '',
+          cookieName: 'gatsby-gdpr-google-analytics',
+          anonymize: true,
+          allowAdFeatures: false
+        },
+        googleTagManager: {
+          trackingId: '',
+          cookieName: 'gatsby-gdpr-google-tagmanager',
+          dataLayerName: 'dataLayer',
+        },
+        facebookPixel: {
+          pixelId: '',
+          cookieName: 'gatsby-gdpr-facebook-pixel',
+        },
+        tikTokPixel: {
+          pixelId: '',
+          cookieName: 'gatsby-gdpr-tiktok-pixel',
+        },
+        hotjar: {
+          hjid: '',
+          hjsv: '',
+          cookieName: 'gatsby-gdpr-hotjar',
+        },
+        linkedin: {
+          trackingId: '',
+          cookieName: 'gatsby-gdpr-linked-in',
+        },
+        environments: ['production', 'development']
       },
     },
   ],

@@ -6,13 +6,15 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
     "gatsby": "^5.0.1",
+    "gatsby-plugin-gdpr-cookies": "^2.0.9",
     "gatsby-theme-portfolio-minimal": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -39,5 +41,8 @@
     "animations",
     "dark-mode",
     "gdpr-compliant"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
